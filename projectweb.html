@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f8fafc;
+        font-family: sans-serif Arial;
+        color: grey;
+      }
+      body {
+        padding: 20px;
+        padding-top: 80px;
+      }
+      .Nav {
+        padding: 10px;
+        margin-bottom: 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .Nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+      }
+      .Nav li {
+        display: inline;
+      }
+      .Nav a {
+        position: relative;
+        text-decoration: none;
+      }
+      .Nav a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        background-color: #122cbe;
+      }
+      .Nav a:hover::after {
+        width: 100%;
+      }
+      .Nav button {
+        padding: 10px 20px;
+        background-color: #08215e;
+        color: whitesmoke;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .Nav button:hover {
+        background-color: #3655a3;
+      }
+      img {
+        width: 47px;
+        height: 47px;
+        transition: none;
+      }
+      .Nav a.logo::after {
+        display: none;
+      }
+      .Nav a.Heading::after {
+        display: none;
+      }
+      .item {
+        border: 1px solid #668299;
+        margin-top: 15px;
+        border-radius: 20px;
+        text-decoration-color: #08215e;
+        width: fit-content;
+        margin: 15px auto;
+      }
+      .item p {
+        background-color: #13446c0f;
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: #668299;
+        font-size: large;
+      }
+      .item svg {
+        color: #08215e;
+      }
+      svg,
+      svg * {
+        background: transparent;
+      }
+      .para h1 {
+        text-align: center;
+        color: #0d293fd9;
+        font-size: 5.1rem;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .btn-2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 14px 28px;
+        font-size: 1rem;
+        font-weight: 600;
+
+        background: linear-gradient(135deg, #0d293f, #122cbe);
+        color: white;
+
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+
+        box-shadow: 0 10px 25px rgba(18, 44, 190, 0.25);
+        transition: all 0.3s ease;
+      }
+
+      .btn-2 svg {
+        transition: transform 0.3s ease;
+      }
+      .box-2 {
+        background-color: #d0d0d7;
+        border: none;
+        border-radius: 999px;
+        padding: 28px 32px;
+        text-transform: capitalize;
+        font-size: large;
+        font-weight: bold;
+        color: #0d293f;
+        margin-left: 30px;
+      }
+      .box-2:hover {
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="Nav">
+      <ul class="Nav-bar">
+        <a href="#" class="logo"><img src="./image.png" alt="" /></a>
+        <li>
+          <a
+            class="Heading"
+            href="#"
+            style="font-size: x-large; font-weight: bold; color: #0d293f"
+            >LunaPrep</a
+          >
+        </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Internships</a></li>
+        <li><a href="#">Patners</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><button>Get Started</button></li>
+      </ul>
+    </nav>
+    <div class="item">
+      <p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#08215e"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-sparkles w-4 h-4 text-primary"
+          style="padding: 2px"
+        >
+          <path
+            d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+          ></path>
+          <path d="M20 3v4"></path>
+          <path d="M22 5h-4"></path>
+          <path d="M4 17v2"></path>
+          <path d="M5 18H3"></path>
+        </svg>
+        Transforming Education Through Technology
+      </p>
+    </div>
+    <div class="para">
+      <h1>Shaping Tomorrow</h1>
+      <br />
+      <h1>
+        through
+        <span style="color: #0d293fd9; font-style: italic"> AI-driven</span>
+        <br />Solutions
+      </h1>
+    </div>
+    <br /><br />
+
+    <div class="btn">
+      <button class="btn-2">
+        Talk-To-Our-Expert
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+          />
+        </svg>
+      </button>
+      <button class="box-2">Learn More</button>
+    </div>
+  </body>
+</html>
