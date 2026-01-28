@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idea Gen Technologies</title>
+    <link rel="stylesheet" href="./output.css" />
+    <style>
+      @keyframes slide-in {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        10% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        30% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .step {
+        animation: slide-in 8s infinite;
+      }
+      .step-1 {
+        animation-delay: 0s;
+      }
+      .step-2 {
+        animation-delay: 2s;
+      }
+      .step-3 {
+        animation-delay: 4s;
+      }
+      .step-4 {
+        animation-delay: 6s;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-50">
+    <nav class="px-2 py-4 cursor-pointer bg-blue-50">
+      <ul class="flex justify-between space-x-3">
+        <img src="./pictures/image.png" class="w-auto h-10" alt="" />
+        <li class="hover:text-blue-400"><a href="#">Home</a></li>
+        <li class="hover:text-blue-400"><a href="#">About</a></li>
+        <li class="hover:text-blue-400"><a href="#">Services</a></li>
+        <li class="hover:text-blue-400"><a href="#">Docs</a></li>
+        <li class="hover:text-blue-400"><a href="#">Internships</a></li>
+        <li class="hover:text-blue-400"><a href="#">Collaborations</a></li>
+        <li class="hover:text-blue-400"><a href="#">Contact Us</a></li>
+        <button
+          class="bg-gradient-to-r from-blue-500 to bg-pink-500 hover:from-pink-500 to hover:bg-blue-500 rounded-2xl px-4 py-2"
+        >
+          Get In Touch
+        </button>
+      </ul>
+    </nav>
+    <div class="flex justify-center align-middle text-7xl font-bold">
+      <p class="align-middle text-center">
+        Empower Your Business With <br />
+        <span class="text-pink-600 text-6xl italic">Strategic</span>
+        IT Solutions
+      </p>
+    </div>
+
+    <br />
+    <br />
+    <div
+      class="h-12 overflow-hidden relative text-center mt-8 text-blue-400 text-6xl font-medium"
+    >
+      <p class="absolute w-full step step-1">For Innovations</p>
+      <p class="absolute w-full step step-2">For Future</p>
+      <p class="absolute w-full step step-3">For Students</p>
+      <p class="absolute w-full step step-4">For Institutions</p>
+    </div>
+    <br /><br />
+    <div class="text-gray-500 text-center align-middle mt-2 text-2xl">
+      <p>
+        Delivering cutting-edge workshops, internships, and IT solutions to
+        institutions <br /><span> and enterprises.</span>
+      </p>
+    </div>
+    <div class="flex justify-center mt-10">
+      <button
+        class="px-8 py-2 font-medium text-white bg-gradient-to-r from-blue-400 to-pink-400 rounded-2xl"
+      >
+        Talk To Our Experts
+      </button>
+    </div>
+  </body>
+</html>
