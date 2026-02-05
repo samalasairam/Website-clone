@@ -6,30 +6,32 @@
     <title>Idea Gen Technologies</title>
     <link rel="stylesheet" href="./output.css" />
     <style>
-      @keyframes slide-in {
-        0% {
+      @keyframes smooth-slide {
+        0%,
+        100% {
           opacity: 0;
-          transform: translateY(20px);
+          transform: translate3d(0, 40px, 0);
         }
         10% {
           opacity: 1;
-          transform: translateY(0);
+          transform: translate3d(0, 0, 0);
         }
-        30% {
+        25% {
           opacity: 1;
+          transform: translate3d(0, 0, 0);
         }
-        40% {
+        35% {
           opacity: 0;
-          transform: translateY(-20px);
-        }
-        100% {
-          opacity: 0;
+          transform: translate3d(0, -40px, 0);
         }
       }
 
       .step {
-        animation: slide-in 8s infinite;
+        opacity: 0; /* <--- THIS IS THE FIX. Hides text while waiting. */
+        animation: smooth-slide 8s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+          infinite;
       }
+
       .step-1 {
         animation-delay: 0s;
       }
@@ -45,8 +47,10 @@
     </style>
   </head>
   <body class="bg-blue-50">
-    <nav class="px-2 py-4 cursor-pointer bg-blue-50">
-      <ul class="flex justify-between space-x-3">
+    <nav
+      class="px-2 py-4 cursor-pointer bg-blue-50 fixed top-0 w-full left-0 z-50"
+    >
+      <ul class="flex justify-between space-x-3 md:flex hidden">
         <img src="./pictures/image.png" class="w-auto h-10" alt="" />
         <li class="hover:text-blue-400"><a href="#">Home</a></li>
         <li class="hover:text-blue-400"><a href="#">About</a></li>
@@ -56,15 +60,20 @@
         <li class="hover:text-blue-400"><a href="#">Collaborations</a></li>
         <li class="hover:text-blue-400"><a href="#">Contact Us</a></li>
         <button
-          class="bg-gradient-to-r from-blue-500 to bg-pink-500 hover:from-pink-500 to hover:bg-blue-500 rounded-2xl px-4 py-2"
+          class="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-pink-500 hover:to-blue-500 text-white rounded-2xl px-4 py-2 transition-all duration-300"
         >
           Get In Touch
         </button>
       </ul>
+      <div class="md:hidden">
+        <a class="text-4xl" href="#">&#8801;</a>
+      </div>
     </nav>
-    <div class="flex justify-center align-middle text-7xl font-bold">
+    <div
+      class="flex justify-center items-center text-center text-7xl font-bold pt-32"
+    >
       <p class="align-middle text-center">
-        Empower Your Business With <br />
+        Empower Your Business With
         <span class="text-pink-600 text-6xl italic">Strategic</span>
         IT Solutions
       </p>
@@ -73,7 +82,7 @@
     <br />
     <br />
     <div
-      class="h-12 overflow-hidden relative text-center mt-8 text-blue-400 text-6xl font-medium"
+      class="h-24 overflow-hidden relative text-center mt-8 text-blue-400 text-6xl font-medium"
     >
       <p class="absolute w-full step step-1">For Innovations</p>
       <p class="absolute w-full step step-2">For Future</p>
